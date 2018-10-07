@@ -17,7 +17,7 @@ public class Torre extends Peca
         primeiroMovimento = false;
     }
 
-    public void movimento(Casa destino){
+    public void mover(Casa destino){
         //if - movimentação para cima e para baixo
         //else if - movimentação para os lados;
         if(casa.getX() == destino.getX() && (casa.getY()+1 == destino.getY() || casa.getY()-1 == destino.getY() || casa.getY()+2 == destino.getY() || 

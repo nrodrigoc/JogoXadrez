@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * @author Alan Moraes &lt;alan@ci.ufpb.br&gt;
  * @author Leonardo Villeth &lt;lvilleth@cc.ci.ufpb.br&gt;
  */
-public class Peca {
+public  class Peca {
     
     public static final int BISPO_BRANCO = 0;
     public static final int PEAO_BRANCO = 1;
@@ -27,6 +27,7 @@ public class Peca {
     protected Casa casa;
     protected int tipo;
     private int tipoGeral;
+    
     public Peca(Casa casa, int tipo) {
         this.casa = casa;
         this.tipo = tipo;

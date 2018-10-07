@@ -37,10 +37,14 @@ public class JanelaPrincipal extends JFrame {
         }
         else {
             casaClicadaDestino = casaClicada;
-        
+            if(!casaClicadaDestino.possuiPeca()){
                 jogo.moverPeca(casaClicadaOrigem.getPosicaoX(), casaClicadaOrigem.getPosicaoY(), 
                                casaClicadaDestino.getPosicaoX(), casaClicadaDestino.getPosicaoY());
-            
+            }
+            else{
+                jogo.capturarPeca(casaClicadaOrigem.getPosicaoX(), casaClicadaOrigem.getPosicaoY(), 
+                               casaClicadaDestino.getPosicaoX(), casaClicadaDestino.getPosicaoY());
+            }
             casaClicadaOrigem.atenuar();
             primeiroClique = true;
             atualizar();

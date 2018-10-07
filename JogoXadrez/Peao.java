@@ -7,7 +7,6 @@
  */
 public class Peao extends Peca
 {
-    //private Casa casa;
     private int direcao;
     private boolean primeiroMovimento;
     /**
@@ -30,14 +29,14 @@ public class Peao extends Peca
      * Movimenta o Peão para uma nova casa
      * @param destino nova casa que irá conter o Peão
      */
-    public void movimento(Casa destino){
+    public void mover(Casa destino){
         //if - Verifica se o primeiroMovimento é verdadeiro e se o destino possui peça
         //else if - Se o primeiroMovimento é falso então o peão só anda uma casa
         if(primeiroMovimento && !destino.possuiPeca()){
             //if - verifica se o peão é branco e se o movimento é apenas para cima
             //else if - verifica se o peão é preto e se o movimento é apenas para baixo
             if(tipo == PEAO_BRANCO && (casa.getX() == destino.getX() && (casa.getY()+2 == destino.getY() || casa.getY()+1 == destino.getY()))){
-               super.mover(destino);   
+              super.mover(destino);   
                primeiroMovimento = false;
             }
             else if(tipo == PEAO_PRETO && (casa.getX() == destino.getX() && (casa.getY()-2 == destino.getY() || casa.getY()-1 == destino.getY()))){
